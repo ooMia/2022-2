@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no"/>
+    <meta charset="utf-8">
+    <title>Pure Functions</title>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+<body>
+<h1>Pure Functions</h1>
+<div id="container"</div>
+<script type="text/babel">
+
+/* ch03-05-04-1-pure-functions.html */
+
+function Header(text) {
+    const h1 = document.createElement('h1')
+    h1.innerText = text
+    const div = document.getElementById("container")
+    div.appendChild(h1)
+}
+
+Header("Header() caused side effects")
+
+</script>
+</body>
+</html>

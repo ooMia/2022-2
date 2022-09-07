@@ -1,21 +1,21 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no"/>
     <meta charset="utf-8">
-    <title>Const</title>
+    <title>What It Means to Be Functional</title>
     <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
 </head>
 <body>
-<h1>Const</h1>
+<h1>Functional JavaScript</h1>
 <p>Open the console</p>
 <script type="text/babel">
 
-// 변수 값은 변경 가능하다
-  
-var pizza = true
-pizza = false
-console.log(pizza)
+/* ch03-01-05-functional.html */
+
+const insideFn = logger => logger("함수를 다른 함수에 매개변수로 전달")
+
+insideFn(message => console.log(message))
 
 </script>
 </body>
