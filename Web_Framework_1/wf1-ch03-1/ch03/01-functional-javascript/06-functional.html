@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no"/>
+    <meta charset="utf-8">
+    <title>What It Means to Be Functional</title>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+<body>
+<h1>Functional JavaScript</h1>
+<p>Open the console</p>
+<script type="text/babel">
+
+/* ch03-01-06-functional.html */
+
+var createScream_06 = function(logger) {
+    return function(message) {
+        logger(message.toUpperCase() + "!!!")
+    }
+}
+
+const scream_06 = createScream_06(message => console.log(message))
+scream_06('함수가 함수를 반환')
+scream_06('createScream은 함수를 반환')
+scream_06('scream은 createScream이 반환한 함수를 참조')
+
+
+// function() 을 => 함수로 변환
+const createScream_1 = (logger) => {  
+    return (message) => {
+        logger(message.toUpperCase() + "!!!")
+    }
+}
+
+const scream_1 = createScream_1(message => console.log(message))
+scream_1('함수가 함수를 반환')
+
+
+// 1줄짜리 함수는 {}와 return 생략
+const createScream_2 = (logger) =>   
+    (message) => {
+        logger(message.toUpperCase() + "!!!")
+    }
+
+const scream_2 = createScream_2(message => console.log(message))
+scream_2('함수가 함수를 반환')
+
+
+// 1줄짜리 함수는 {} 생략
+const createScream_3 = (logger) => (message) => logger(message.toUpperCase() + "!!!")
+
+const scream_3 = createScream_3(message => console.log(message))
+scream_3('함수가 함수를 반환')
+
+
+// 매개변수가 1개 이면 ()도 생략: ch03-01-07-functional.html과 동일 코드
+const createScream_4 = logger => message => logger(message.toUpperCase() + "!!!")
+
+const scream_4 = createScream_4(message => console.log(message))
+scream_4('함수가 함수를 반환')
+
+
+/* ch03-01-07-functional.html */
+const createScream_07 = logger => message => 
+    logger(message.toUpperCase() + "!!!")
+
+const scream_07 = createScream_07(message => console.log(message))
+scream_07('함수가 함수를 반환')
+
+</script>
+</body>
+</html>
