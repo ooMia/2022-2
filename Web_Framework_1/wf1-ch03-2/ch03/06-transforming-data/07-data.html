@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no"/>
+    <meta charset="utf-8">
+    <title>Transforming Data</title>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+<body>
+<h1>Transforming Data</h1>
+<p>Open the Console</p>
+<script type="text/babel">
+
+/* ch03-06-07-data.html */
+
+let schools = [
+    { name: "Yorktown"},
+    { name: "Stratford" },
+    { name: "Washington & Lee"},
+    { name: "Wakefield"}
+]
+
+// Edit Name with less syntax
+
+const editName = (oldName, name, arr) =>
+    arr.map(item => (item.name === oldName) ?
+        // ({...item,name}) :
+        // {...item, name} :
+        // ({ name }) : 
+        { name } : 
+        item
+    )
+
+let updatedSchools = editName("Stratford", "HB Woodlawn", schools)
+
+// callback에서 2번째 매개변수는 array 요소의 인덱스를 의미
+const editNth = (n, name, arr) =>
+    arr.map((item, i) => (i === n) ? { name } : item )
+
+let updatedSchools2 = editNth(2, "Mansfield", schools)
+
+console.log( updatedSchools )
+console.log( updatedSchools2 )
+console.log( schools )
+
+</script>
+</body>
+</html>
