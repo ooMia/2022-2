@@ -1,3 +1,8 @@
-Virtual_Reality/unityProjects/
-!*/TA/answer/src/
-TA/
+Virtual_Reality/unityProjects
+
+!/Computer_Programming/
+/Computer_Programming/*
+!/Computer_Programming/answer/
+/Computer_Programming/answer/*
+!Computer_Programming/answer/src/
+
