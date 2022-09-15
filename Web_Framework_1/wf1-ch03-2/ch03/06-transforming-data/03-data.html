@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no"/>
+    <meta charset="utf-8">
+    <title>Transforming Data</title>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+<body>
+<h1>Transforming Data</h1>
+<p>Open the Console</p>
+<script type="text/babel">
+
+/* ch03-06-03-data.html */
+
+const schools = [
+    "Yorktown",
+    "Washington & Lee",
+    "Wakefield"
+]
+
+console.log(schools)
+
+const cutSchool = (cut, list) =>
+    list.filter(sch => sch !== cut)
+
+console.log(cutSchool("Washington & Lee", schools).join(", "))
+
+console.log(schools)
+
+</script>
+</body>
+</html>
