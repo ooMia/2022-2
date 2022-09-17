@@ -27,9 +27,10 @@ int main()
 	printf("3: %d\n", result *= div);
 
 	// 4: {(1+2+..+33)-(0+..+0)}*3 - O(1)
-	int n = (from / div) + (from % div != 0) - 1;
+	int n = (from / div) + (from % div != 0);
 	int m = (to / div);
-	result = (m * (m + 1) / 2) - (n * (n + 1) / 2);
+	result = (m + n) * (m - n + 1) / 2;
+	// OR result = (m * (m + 1) - n * (n - 1)) / 2;
 	printf("4: %d\n", result *= div);
 
 	printf("%d부터 %d 사이의 모든 %d의 배수의 합은 %d입니다.\n", from, to, div, result);
