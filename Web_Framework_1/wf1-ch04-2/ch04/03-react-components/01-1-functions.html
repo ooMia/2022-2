@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>React Component: functions</title>
+</head>
+<body>
+
+<!-- Root element -->
+<div id="root"></div>
+
+<!-- React Library & React DOM-->
+<script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+<script>
+
+/* ch04-03-01-1-functions.html */
+
+function IngredientsList() {
+  return React.createElement(
+    "ul", 
+    { className: "ingredients" },
+    React.createElement("li", null, "무염 버터 1 컵"),
+    React.createElement("li", null, "크런치 땅콩 버터 1 컵"),
+    React.createElement("li", null, "흑설탕 1 컵"),
+    React.createElement("li", null, "백설탕 1 컵"),
+    React.createElement("li", null, "달걀 2 개"),
+    React.createElement("li", null, "일반 밀가루 2.5 컵"),
+    React.createElement("li", null, "베이킹 소타 1 티스푼"),
+    React.createElement("li", null, "소금 0.5 티스푼")
+  );
+}
+
+ReactDOM.render(
+    React.createElement(IngredientsList, null, null),
+    document.getElementById("root")
+);
+
+</script>
+
+</body>
+</html>

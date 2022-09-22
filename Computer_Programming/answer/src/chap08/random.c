@@ -1,10 +1,10 @@
-#define _CRT_SECURE_NO_WARNINGS
-// ³­¼ö »ı¼º ÇÁ·Î±×·¥
+ï»¿#define _CRT_SECURE_NO_WARNINGS
+// ë‚œìˆ˜ ìƒì„± í”„ë¡œê·¸ë¨
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
 
-// n°³ÀÇ ³­¼ö¸¦ È­¸é¿¡ Ãâ·ÂÇÑ´Ù. 
+// nê°œì˜ ë‚œìˆ˜ë¥¼ í™”ë©´ì— ì¶œë ¥í•œë‹¤. 
 void get_random( int n )
 {
 	int i;
@@ -14,10 +14,11 @@ void get_random( int n )
 
 int main( void )
 {
-	// ÀÏ¹İÀûÀ¸·Î ³­¼ö ¹ß»ı±âÀÇ ½Ãµå(seed)¸¦ ÇöÀç ½Ã°£À¸·Î ¼³Á¤ÇÑ´Ù. 
-	// ÇöÀç ½Ã°£Àº ¼öÇàÇÒ ¶§¸¶´Ù ´Ş¶óÁö±â ¶§¹®ÀÌ´Ù. 
+	// ì¼ë°˜ì ìœ¼ë¡œ ë‚œìˆ˜ ë°œìƒê¸°ì˜ ì‹œë“œ(seed)ë¥¼ í˜„ì¬ ì‹œê°„ìœ¼ë¡œ ì„¤ì •í•œë‹¤.
+	// í˜„ì¬ ì‹œê°„ì€ ìˆ˜í–‰í•  ë•Œë§ˆë‹¤ ë‹¬ë¼ì§€ê¸° ë•Œë¬¸ì´ë‹¤. 
 	srand( (unsigned)time( NULL ) );
 	get_random( 10 );
 
 	return 0;
 }
+ 
