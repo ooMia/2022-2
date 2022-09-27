@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>월화수목금토일</h2>
+    <script>
+        let arr = new Array("월", "화", "수", "목", "금")
+        let input = prompt("월화수목금토일 중에서 입력하세요")
+        if (arr.includes(input)) document.write(input + " 출근");
+        else document.write(input + " 휴일");
+    </script>
+</body>
+
+</html>
+
+<!--
+
+    입력받은 String - parseInt 정수형 타입 캐스팅
+    head는 선언 후 호출시 실행, body는 단일 실행
+    js 파일의 메일 첨부는 보안상 금지, 확장명 변환 필요
+
+    코드 실행하여 내용 채우기
+    1. document.writer 태그 포함
+    2. prompt 주관식, confirm 확인/취소, alert 확인
+    
+    ECMA 6
+    (var) global scope
+    (let,const) local scope
+
+    문자열" ... " 안에 또 다른 문자열 선언 ' ... '
+
+    문자열 연산자 + += 이어붙이기
+    != == 와 같은 연산도 가능
+    7장에서 String 객체 제공하여 메소드 활용 가능
+
+    js switch는 상수 스칼라가 아니더라도
+    switch 변수로 활용 가능 ex 문자열
+
+    단일 함수에 하나의 책임을 부여
+    큰 문제를 작은 단위로 쪼개어 접근
+    입력 계산 출력을 분리
+    SOLID SRP OCP LSP I D+
+
+
+    Chap 7: Core 객체
+    String Array
+    JavaScript = Object based Language not OOL
+
+    ★ DOM객체
+    Browser객체
+
+
+
+
+-->
