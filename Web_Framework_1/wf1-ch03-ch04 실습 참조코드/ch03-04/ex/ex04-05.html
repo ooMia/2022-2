@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no"/>
+    <meta charset="utf-8">
+    <title>ex04-05 from ch03-06-09-data.html</title>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+<body>
+<h1>Transforming Data</h1>
+<p>Open the Console</p>
+<script type="module">
+
+/**
+ * ex04-05.html
+ * 
+ * Array.reduce()
+ * https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
+ */
+
+const ages = [ 20, 50, 60, 35, 70, 25, 45 ];
+    
+console.log( ages );
+
+const maxAge = ages.reduce( (max, age, idx) => {
+    console.log(`idx ${idx}: ${max} > ${age} = ${max>age}`);
+    return max > age ? max : age;
+});
+console.log(`maxAge: ${maxAge}`);
+
+const maxFinder1 = arr => arr.reduce( (max, age, idx) => {
+    console.log(`idx ${idx}: ${max} > ${age} = ${max>age}`);
+    return max > age ? max : age;
+});
+console.log(`maxAge: ${maxFinder1(ages)}`);
+
+const calculator = (max, age, idx) => {
+    console.log(`idx ${idx}: ${max} > ${age} = ${max>age}`);
+    return max > age ? max : age;
+};
+const maxFinder2 = arr => arr.reduce(calculator);
+console.log(`maxAge: ${maxFinder2(ages)}`);
+
+console.log( ages );
+
+</script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>ex05-02-1Q from ch04-03-01-2-functions.html</title>
+</head>
+
+<body>
+
+    <!-- Root element -->
+    <div id="root"></div>
+
+    <!-- React Library & React DOM-->
+
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <!--
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+-->
+
+    <script>
+
+        /** ex05-02-1Q.html
+         * function components, without parameters, react@16
+         */
+
+        const address = [
+            "Division of Computer Engineering",
+            "Hansung University",
+            "116",
+            "Samseongyo-ro",
+            "16-gil",
+            "Seongbuk-gu",
+            "Seoul",
+            "02876",
+            "South Korea"
+        ];
+
+        const Address = function () {
+            // define function component without parameters
+            return React.createElement(
+                "ul",
+                { className: "address" },
+                address.map((addr, i) => React.createElement("li", { key: i }, addr))
+            );
+        }
+
+        ReactDOM.render(
+            React.createElement(Address, null, null),
+            document.getElementById("root")
+        );
+
+    </script>
+
+</body>
+
+</html>

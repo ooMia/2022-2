@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>ex05-01-4Q from ch04-02-04-1-elements.html</title>
+</head>
+
+<body>
+
+    <!-- 타겟 컨테이너 -->
+    <div id="root"></div>
+
+    <!-- React Library & React DOM-->
+    <!-- 
+    CDN link: https://ko.reactjs.org/docs/cdn-links.html
+    ReactDOMClient: https://reactjs.org/docs/react-dom-client.html
+-->
+    <!--
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+-->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <script>
+
+        /**
+         * ex05-01-4.html
+         * react@18, multiple elements with array
+         */
+
+        const address = [
+            "Division of Computer Engineering",
+            "Hansung University",
+            "116",
+            "Samseongyo-ro",
+            "16-gil",
+            "Seongbuk-gu",
+            "Seoul",
+            "02876",
+            "South Korea"
+        ];
+
+        const addr = React.createElement(
+            // multiple elements with array
+            "section",
+            { id: "address" },
+            React.createElement(
+                "ul",
+                { className: "contents" },
+                React.createElement("li", null, address[0]),
+                React.createElement("li", null, address[1]),
+                React.createElement("li", null, address[2]),
+                React.createElement("li", null, address[3]),
+                React.createElement("li", null, address[4]),
+                React.createElement("li", null, address[5]),
+                React.createElement("li", null, address[6]),
+                React.createElement("li", null, address[7]),
+                React.createElement("li", null, address[8])
+            )
+        );
+
+        // create root & render root at react@18
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(addr);
+
+        console.log('root:', root);
+        console.log('addr:', addr);
+
+    </script>
+
+</body>
+
+</html>

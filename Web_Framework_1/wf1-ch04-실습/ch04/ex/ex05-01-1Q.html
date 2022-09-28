@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>ex05-01-1Q from ch04-02-01-elements.html</title>
+</head>
+
+<body>
+
+    <!-- 타겟 컨테이너 -->
+    <div id="root"></div>
+
+    <!-- React Library & React DOM-->
+    <!-- 
+    React.createElement(): https://ko.reactjs.org/docs/react-api.html#createelement
+    ReactDOM.render(): https://ko.reactjs.org/docs/react-dom.html#render
+-->
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <script>
+        /**
+         * ex05-01-1Q.html
+         * react@16, 1 element
+         */
+
+        // create addr element with "h1"
+        const addr = React.createElement( "h1", {id: "address"}, "Address" )
+
+        ReactDOM.render(
+            addr,
+            document.getElementById('root')
+        );
+
+        console.log('addr', addr);
+
+    </script>
+
+</body>
+
+</html>

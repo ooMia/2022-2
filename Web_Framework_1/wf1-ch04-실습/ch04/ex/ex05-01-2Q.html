@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>ex05-01-2Q from ex05-01-1.html</title>
+</head>
+
+<body>
+
+    <!-- 타겟 컨테이너 -->
+    <div id="root"></div>
+
+    <!-- React Library & React DOM-->
+    <!-- 
+    CDN link: https://ko.reactjs.org/docs/cdn-links.html
+    ReactDOMClient: https://reactjs.org/docs/react-dom-client.html
+-->
+    <!--
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+-->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <script>
+
+        /**
+         * ex05-01-2Q.html
+         * react@18, 1 element
+         */
+
+        const addr = React.createElement(
+            "h1", { id: "address" }, "Address"
+        );
+
+        // create root & render root at react@18
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(addr);
+
+        console.log('root:', root);
+        console.log('addr:', addr);
+
+    </script>
+
+</body>
+
+</html>
