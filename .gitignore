@@ -2,8 +2,10 @@ Virtual_Reality/unityProjects
 
 Network_Programming/assignment
 
-!/Computer_Programming/
-/Computer_Programming/*
-!/Computer_Programming/answer/
-/Computer_Programming/answer/*
-!Computer_Programming/answer/src/
+!/Computer_Vision/
+/Computer_Vision/*
+!/Computer_Vision/answer/
+/Computer_Vision/answer/*
+!Computer_Vision/answer/src/
+
+./vs/*

@@ -3,3 +3,4 @@ public interface PayCalculator {
         return 10000 * workingHours + 15000 * overtimeHours;
     }
 }
+
