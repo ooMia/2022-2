@@ -1,0 +1,38 @@
+p {
+    display: inline-block;
+}
+
+input[type="text"] {
+    color: purple;
+}
+
+#id1 {
+    color: lawngreen;
+}
+
+p#id1 {
+    background-color: red;
+}
+
+.class1 {
+    color: red;
+}
+
+p.class1 {
+    background-color: lawngreen;
+}
+
+div>p {
+    /* 자식 */
+    border: dotted violet;
+}
+
+div p {
+    /* 자손 */
+    border: violet;
+}
+
+div *[type=text] {
+    /*  */
+    border: green;
+}

@@ -29,7 +29,10 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="src\chap09\stack.c" />
-    <ClCompile Include="src\chap10\chap10.c" />
+    <ClCompile Include="src\chap10\chap10.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\chap11\chap11.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\chap09\stack.h" />

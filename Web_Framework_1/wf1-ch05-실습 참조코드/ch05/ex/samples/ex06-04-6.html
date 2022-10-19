@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Page setup</title>
+</head>
+<body>
+
+<!-- Root element -->
+<div id="root"></div>
+
+<!-- React Library & React DOM-->
+<!--
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+-->
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<script type="text/babel">
+
+/**
+ * ex06-04-6.html
+ * 데이터 확장(1) - 리액트 컴포넌트 분리
+ */
+
+const data = {
+    name: "Hansung University",
+    locations: {
+        country: "Korea",
+        city: "Seoul",
+        address: "116 Samseongyo-ro"
+    },
+    majors: [
+        "Web",
+        "Mobile SW",
+        "Bigdata",
+        "Digital contents"
+    ]
+};
+
+const Famous = props => (
+    <div>
+        <header>
+            <h1>{props.title}</h1>
+        </header>
+        <article className="places">
+            <Place
+                name={props.famous.name}
+                locations={props.famous.locations}
+                majors={props.famous.majors}
+            />
+        </article>
+    </div>
+);
+
+const Place = ({ name, locations, majors }) => (
+    <section id={name.toLowerCase().replace(/ /g, "-")}>
+        <h2>{name}</h2>
+        <Location locations={locations} />
+        <Majors majors={majors} />
+    </section>
+);
+
+const Location = ({ locations }) => (
+    <>
+        <h3>Location</h3>
+        <ul className="locations">
+            {Object.keys(locations).map((obj_prp, i) => (
+                <li key={i}>{obj_prp}: {locations[obj_prp]}</li>
+            ))}
+        </ul>
+    </>
+);
+
+const Majors = ({ majors }) => (
+    <>
+        <h3>Majors</h3>
+        <ul className="majors">
+            {majors.map((major, i) => (
+                <li key={i}>{major}</li>
+            ))}
+        </ul>
+    </>
+);
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Famous famous={data} title="Famous places" />);
+
+</script>
+
+</body>
+</html>
+

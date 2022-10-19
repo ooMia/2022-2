@@ -1,0 +1,103 @@
+부모클래스 { abstract }
+
+의문점을 해소하는 시간이지, SRP를 이해하는 시간은 아님
+
+ 
+
+SRP OCP LSP ISP DIP
+
+OCP 입장에서 봐야함
+
+LSP 행위 일관성 
+
+ 
+
+다형성 => 일반화 관계
+
+ 
+
+조건문 if () 상황에 따라 변화함
+
+ 
+
+ 
+
+클래스 : 변화의 단위
+
+not 인스턴스를 만드는 템플릿
+
+not 속성을 하나로
+
+ 
+
+어떤 경우에 abstract class, interface 선택
+
+is a kind of: Abstract class
+
+can do: Interface
+
+ 
+
+(공통된 코드) 묶을 것이 많으면 abstract
+
+공통된 속성은 abstract 묶을 수 있음.
+
+method 나열만 하는 경우, interface
+
+ 
+
+여러 Song 인스턴스들이 공유하는 하나의 속성을
+
+효율적으로 처리하기 위해 Singleton Pattern
+
+ 
+
+ 
+
+ 
+
+ 
+
+SRP: 한 클래스 하나의 Actor만 책임진다
+
+ 
+
+ 
+
+extends 확장(부모의 기능을 모두 다 수행)
+
+ 
+
+ 
+
+c++
+
+public / private inheritance 
+
+형제 간에는 행위 일관성이 없다 
+
+c언어에서는 std 밑으로 stdI scanf stdO printf
+
+ 
+
+ 
+
+ 
+
+DIP 
+
+hexagonal architecture
+
+ 
+
+시험은 8주차
+
+큰 강의실에서
+
+합반 X 각 분반마다 시험 다름
+
+ 
+
+DIP를 반드시 배웠던 유형대로 적용해야만 해결되는 것은 아니다.
+
+DCL이 외부

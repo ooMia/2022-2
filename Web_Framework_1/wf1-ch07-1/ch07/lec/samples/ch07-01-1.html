@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>ch07-01-1.html</title>
+</head>
+
+<body>
+
+<!-- Root element -->
+<div id="root"></div>
+
+<!-- React Library & React DOM-->
+<!--
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+-->
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<script type="text/babel">
+
+/**
+ * ch07-01-1.html
+ * 
+ * Checkbox() 컴포넌트가 <>...</> 엘리먼트를 반환하기 전 alert() 수행
+ */
+
+const Checkbox = () => {
+  const [checked, setCheck] = React.useState(false);
+
+  alert(`checked: ${checked.toString()}`);
+
+  return (
+    <>
+      <input
+        type="checkbox"
+        value={checked}
+        onChange={() => setCheck( checked => !checked )}
+      />
+      {checked ? "checked" : "not checked"}
+    </>
+  );
+};
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Checkbox />);
+
+</script>
+
+</body>
+</html>

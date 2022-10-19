@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ch08-01-6.html</title>
+</head>
+<body>
+
+<script>
+/**
+ * ch08-01-6.html
+ * const promise = fetch(url, [options]);
+ * async/await
+ * https://developer.mozilla.org/ko/docs/Web/API/Fetch_API
+ * https://developer.mozilla.org/ko/docs/Web/API/Fetch_API/Using_Fetch
+ */
+
+const getDataFromUrl = async login => {
+  try {
+    const response = await fetch(`https://api.github.com/users/${login}`);
+    const data = await response.json();
+    console.log(data);
+  }
+  catch (err) {
+    console.error(err);
+  }
+}
+
+getDataFromUrl("sp-hsu");
+
+</script>
+
+</body>
+</html>

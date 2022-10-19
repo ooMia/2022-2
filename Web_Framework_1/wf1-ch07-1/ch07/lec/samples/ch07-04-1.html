@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>ch07-04-1.html</title>
+</head>
+
+<body>
+
+<!-- Root element -->
+<div id="root"></div>
+
+<!-- React Library & React DOM-->
+<!--
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+-->
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<script type="text/babel">
+
+/**
+ * ch07-04-1.html
+ */
+
+const Average = () => {
+  const [list, setList] = React.useState([]);
+  const [number, setNumber] = React.useState('');
+
+  // onChange()는 number 상태를 변경 --> render()
+  const onChange = e => setNumber(e.target.value);
+
+  // 버튼 클릭 --> input 값 --> number를 list에 추가 --> list 갱신 --> render()
+  const onInsert = e => {
+    const nextList = list.concat(parseInt(number));
+    setList(nextList);
+    setNumber('');
+  };
+  const getAverage = numbers =>{
+    console.log("calculating average..", list);
+    if (numbers.length === 0) return 0;
+    const sum = numbers.reduce((a, b) => a + b);
+    return sum/numbers.length;
+  };
+
+  return (
+    <div>
+      <input value={number} onChange={onChange} />
+      <button onClick={onInsert}>Insert</button>
+      <ul>
+        {list.map( (value, i) => (
+          <li key={i}>{value}</li>
+        ))}
+      </ul>
+      <div>
+        <b>Average: </b>{getAverage(list)}
+      </div>
+    </div>
+  )
+};
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Average />);
+
+</script>
+
+</body>
+</html>

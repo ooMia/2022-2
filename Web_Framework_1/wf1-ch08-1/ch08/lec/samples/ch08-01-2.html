@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ch08-01-2.html</title>
+</head>
+<body>
+
+<script>
+
+/**
+ * ch08-01-2.html
+ * XMLHttpRequest()
+ * https://developer.mozilla.org/ko/docs/Web/API/XMLHttpRequest
+ */ 
+
+const xhr = new XMLHttpRequest();
+xhr.onreadystatechange = () => {
+  if (xhr.readyState === xhr.DONE){
+    (xhr.status === 200 || xhr.status === 201) ?
+      console.log(xhr.responseText) :
+      console.error(xhr.responseText);
+  };
+}
+xhr.open('GET', 'https://api.github.com/users/sp-hsu');
+xhr.send();
+
+</script>
+
+</body>
+</html>

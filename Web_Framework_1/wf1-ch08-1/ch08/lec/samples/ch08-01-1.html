@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ch08-01-1.html</title>
+</head>
+<body>
+
+<script>
+/**
+ * ch08-01-1.html
+ * const promise = fetch(url);
+ * https://developer.mozilla.org/ko/docs/Web/API/Fetch_API
+ * https://developer.mozilla.org/ko/docs/Web/API/Fetch_API/Using_Fetch
+ */
+
+fetch(`https://api.github.com/users/sp-hsu`)
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(err => console.error(err));
+
+</script>
+
+</body>
+</html>

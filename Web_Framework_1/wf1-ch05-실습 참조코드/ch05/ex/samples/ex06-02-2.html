@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ex06-02-2.html</title>
+</head>
+<body>
+
+<!-- Root element -->
+<div id="root"></div>
+
+<!-- React Library & React DOM-->
+<!--
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+-->
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<script type="text/babel">
+
+/**
+ * ex06-02-2.html
+ * 데이터 (배열)을 사용한 리액트 엘리먼트 구성 및 렌더링, map() 함수 활용
+ */
+
+const data = [
+    "web",
+    "mobile software",
+    "bigdata",
+    "ditital contents"
+]
+
+const majors = (
+    <ul>
+        {data.map( (major, i) => (
+            <li key={i}>{major}</li>
+        ))}
+    </ul>
+);
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(majors);
+
+</script>
+
+</body>
+</html>

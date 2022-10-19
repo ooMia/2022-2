@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ch08-03-2-logs.html</title>
+</head>
+<body>
+
+<!-- Root element -->
+<div id="root"></div>
+
+<!-- React Library & React DOM-->
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<script type="text/babel">
+/**
+ * ch08-03-2-logs.html
+ * ch08-03-1 with console logs
+ * localStorage.getItem(), localStorage.setItem()
+ * https://developer.mozilla.org/ko/docs/Web/API/Window/localStorage
+ */
+
+const url = "https://api.github.com/users";
+const loadJSON = key =>
+  key && JSON.parse(localStorage.getItem(key));
+const saveJSON = (key, data) =>
+  localStorage.setItem(key, JSON.stringify(data));
+
+const GithubUser = ({ login }) => {
+  console.log('[0]: ', data, login);
+  const [data, setData] = React.useState(
+    loadJSON(`user:${login}`)
+  );
+  console.log('[1]: ', data, login);
+
+  React.useEffect( () => {
+    console.log('[2] useEffect.data: ', data, login);
+	if (!data) return;
+    if (data.login === login) return;
+    const {name, login, avatar_url, location} = data;
+    saveJSON(
+      `user:${login}`, 
+      {name, login, avatar_url, location});
+  }, [data]);
+
+  React.useEffect(() => {
+    console.log('[3] useEffect.login: ', data, login);
+    if (!login) return;
+    if (data && data.login === login) return;
+    fetch(`${url}/${login}`)
+      .then(response => response.json())
+      .then(setData)
+      .catch(console.error)
+  }, [login]);
+
+  if (data) {
+    console.log('[4]:', data, login);
+    return <pre>{JSON.stringify(data, null, 2)}</pre>;
+  }
+  
+  console.log('[5]:', data, login);
+  return <div>No data</div>;
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<GithubUser login="sp-hsu" />);
+
+</script>
+
+</body>
+</html>

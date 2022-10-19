@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ch08-05-2.html</title>
+</head>
+<body>
+
+<!-- Root element -->
+<div id="root"></div>
+
+<!-- React Library & React DOM-->
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<script type="text/babel">
+/**
+ * ch08-05-2.html
+ * render prop
+ */
+
+const csehsu3 = [
+  { track: "Mobile Software", subject: "Advanced Mobile Programming" },
+  { track: "Web Engineering", subject: "Web Framework 1" },
+  { track: "Bigdata", subject: "Database Design" },
+  { track: "Digital Contents", subject: "Virtual Reality" }
+];
+
+const List = ({ data = [], renderEmpty, renderItem }) => {
+  return !data.length ? renderEmpty : (
+    <ul>
+      {data.map( (item, i) => (
+        <li key={i}>{renderItem(item)}</li>
+      ))}
+    </ul>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <List 
+    data={csehsu3}
+    renderEmpty={<p>This list is empty</p>}
+    renderItem={info => (
+      <>
+        {info.track} - {info.subject}
+      </>
+    )}
+  />
+);
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Hansung University",
+    "locations": {
+      "country": "Korea",
+      "city": "Seoul",
+      "address": "116 Samseongyo-ro"
+    },
+    "majors": [
+      "Web",
+      "Mobile SW",
+      "Bigdata",
+      "Digital contents"
+    ]
+  },
+  {
+    "name": "Musée du Louvre",
+    "locations": {
+      "country": "France",
+      "city": "Paris",
+      "address": "99 Rue de Rivoli"
+      },
+      "majors": [
+        "Mona Lisa",
+        "Le Sacre de Napoléon",
+        "La Liberté guidant le peuple"
+      ]
+    },
+  {
+    "name": "Griffith Observatory",
+    "locations": {
+      "country": "US",
+      "city": "Los Angeles",
+      "address": "2800 East Observatory Rd"
+    },
+    "majors": [
+      "La La Land",
+      "sunset",
+      "James Dean"
+    ]
+  }
+]

@@ -1,0 +1,59 @@
+
+
+
+
+Chap 9
+이벤트(event)
+사용자의 입력 행위, 문서나 브라우저의 상태 변화를 브라우저가 자바스크립트 코드에게 알리는 통지(notification)
+
+load 이벤트(HTML 문서 전체 로딩 완료 시, 이미지의 로딩 완료 시)
+dblclick (마우스 더블클릭 시)
+click (마우스 클릭 시)
+change (라디오버튼 선택 시)
+submit (submit 타입 버튼 클릭 시)
+reset (reset 타입 버튼 클릭 시)
+keypress (키를 누를 때)
+keyup (누른 키를 놓을 때)
+resize (윈도우 크기 변경 시)
+
+이벤트 리스너 (event listener)
+
+HTML 태그, DOM 객체, HTML 객체
+HTML 페이지에 작성된 각 HTML 태그는 브라우저에 의해 DOM 객체로 바뀌고 화면에 출력된다. 따라서, 이벤트가 HTML 태그에 발생한다, DOM 객체에 이벤트가 발생한다, 객체에 이벤트가 발생한다는 것은 모두 같은 뜻이다. 
+
+이벤트 리스너의 이름은 이벤트 이름 앞에 on을 덧붙인다.
+ex) mousedown 이벤트의 리스너는 onmousedown이다
+
+
+onkeydown	아무 키나 누르는 순간
+onkeypress	alpha-numeric(영숫자) 키를 누르는 순간
+onkeyup		누른 키를 놓는 순간
+onclick		객체에 클릭할 때
+oncontextmenu	객체에 오른쪽 마우스 버튼이 클릭될 때, 컨텍스트 메뉴를 출력하고자 할 때
+ondblclick	객체에 더블 클릭될 때
+onmousedown	객체에 마우스 버튼이 눌러지는 순간
+onmouseenter	마우스 커서가 객체 영역 안으로 들어가는 순간
+onmouseleave	마우스 커서가 객체 영역에서 벗어나는 순간
+onmousemove	객체 위에서 마우스가 움직이는 동안 계속
+onmouseover	마우스 커서가 객체 영역 (자식들도 포함) 안으로 들어가는 순간
+onmouseout	마우스 커서가 객체 영역 (자식들도 포함) 에서 벗어나는 순간
+onmouseup	눌러진 마우스 버튼을 놓는 순간
+onwheel		마우스 휠을 굴리는 매 순간, onmousewheel은 deprecated
+onabort		이미지나 문서의 로딩이 중단된 경우
+onerror		문서나 이미지, 리소스 로딩 시 오류가 발생할 때
+onload		문서나 이미지의 로딩이 완료된 직후
+onresize		윈도우, 프레임 혹은 객체의 크기가 변경될 때
+onunload		웹 페이지가 언로드 된 후
+onbeforeprint	웹 페이지 프린트나 미리보기를 시작하기 직전
+onafterprint	웹 페이지 프린트를 끝냈거나 미리보기를 마치고 돌아갈 때
+onfocus		객체가 포커스를 가지게 되었을 때
+onblur		객체가 포커스를 잃을 때
+onchange	<input>, <keygen>, <select>, <textarea>의 텍스트나 선택된 내용, 체크 상태 등이 변할 때
+onreset		사용자가 폼의 reset 버튼을 눌렀을 때 / 자바스크립트 코드로 폼을 리셋시켰을 때 / 폼의 모든 요소들이 초기 상태로 리셋될 때 
+onsearch		<input type="search">에 검색 텍스트를 입력하고 <Enter> 키를 누를 때
+onselect		<textarea>나 <input type="text | password">에 입력된 텍스트를 사용자가 선택할 때 (예를 들어 마우스로 긁어 선택할 때)
+onsubmit		사용자가 submit 버튼을 클릭하여 폼을 전송할 때. 자바스크립트 코드로 form 객체의 submit() 메소드를 호출할 때는 이벤트 발생 안 됨
+
+
+
+

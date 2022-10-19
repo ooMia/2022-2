@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>ch07-04-2.html</title>
+</head>
+
+<body>
+
+<!-- Root element -->
+<div id="root"></div>
+
+<!-- React Library & React DOM-->
+<!--
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+-->
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<script type="text/babel">
+
+/**
+ * ch07-04-2.html
+ * useMemo(): 의존성 array가 변경되었을 때에만 다시 계산하는 Hooks, 결과 값을 반환
+ * https://ko.reactjs.org/docs/hooks-reference.html#usememo
+ */
+
+const Average = () => {
+  const [list, setList] = React.useState([]);
+  const [number, setNumber] = React.useState('');
+
+  const onChange = e => setNumber(e.target.value);
+  const onInsert = e => {
+    const nextList = list.concat(parseInt(number));
+    setList(nextList);
+    setNumber('');
+  };
+  const getAverage = numbers =>{
+    console.log("calculating average..", list);
+    if (numbers.length === 0) return 0;
+    const sum = numbers.reduce((a, b) => a + b);
+    return sum/numbers.length;
+  };
+
+  // 의존성 array인 list가 변경되었을 때에만 다시 계산
+  const avg = React.useMemo(
+    () => getAverage(list),
+    [list]
+  );
+
+  return (
+    <div>
+      <input value={number} onChange={onChange} />
+      <button onClick={onInsert}>Insert</button>
+      <ul>
+        {list.map( (value, i) => (
+          <li key={i}>{value}</li>
+        ))}
+      </ul>
+      <div>
+        <b>Average: </b>{avg}
+      </div>
+    </div>
+  )
+};
+  const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]);
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Average />);
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ch08-01-3.html</title>
+</head>
+<body>
+
+<script>
+/**
+ * ch08-01-3.html
+ * XMLHttpRequest(), promise
+ * https://developer.mozilla.org/ko/docs/Web/API/XMLHttpRequest
+ */
+
+const getDataFromUrl = (method, url) => new Promise( (resolve, reject) => {
+  const xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = () => {
+    if (xhr.readyState === xhr.DONE){
+      (xhr.status === 200 || xhr.status === 201) ?
+        resolve(xhr.response) :
+        reject(xhr.response);
+    }
+  };
+  xhr.open(method, url);
+  xhr.send();  
+});
+
+getDataFromUrl('GET', 'https://api.github.com/users/sp-hsu')
+.then(data => console.log(JSON.parse(data)))
+.catch(err => console.error(err))
+
+</script>
+
+</body>
+</html>

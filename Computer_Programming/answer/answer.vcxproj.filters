@@ -33,6 +33,9 @@
     <ClCompile Include="src\chap10\chap10.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="src\chap11\chap11.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\chap09\stack.h">
