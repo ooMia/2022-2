@@ -1,0 +1,59 @@
+
+E
+java:S3740'"/Provide the parametrized type for this generic.(èªš©
+E
+java:S3740'"/Provide the parametrized type for this generic.(èªš©
+K
+java:S3740"/Provide the parametrized type for this generic.(ü›ãÕøÿÿÿÿ
+o	java:S135İ"YReduce the total number of break and continue statements in this loop to use at most one.(¥¤…ë
+Q
+java:S1141å"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ
+f	java:S117e"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ê¨Œò
+k	java:S117w"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾ùæ¤úÿÿÿÿ
+g	java:S117“"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ú±ÙÆ
+C
+java:S1604."(Make this anonymous inner class a lambda(¤©Òâüÿÿÿÿ
+C
+java:S1604Y"(Make this anonymous inner class a lambda(”¢Şÿÿÿÿÿ
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(óÙ–•üÿÿÿÿ8ÎâºÀ0
+W
+java:S2259Á"@A "NullPointerException" could be thrown; "bb" is nullable here.(º¬µÉ
+r	java:S116&"XRename this field "client_socket" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬›®Ñøÿÿÿÿ
+g	java:S116'"RRename this field "UserVec" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(èªš©
+>
+java:S1948%"(Make "socket" transient or serializable.(ıÔ¤
+J
+java:S1948&"/Make "client_socket" transient or serializable.(¬›®Ñøÿÿÿÿ
+{
+java:S1149'"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(èªš©
+
+java:S1149"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(ü›ãÕøÿÿÿÿ
+d
+java:S3252>"IUse static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE".(Õû»öşÿÿÿÿ
+M
+java:S1135^"2Complete the task associated to this TODO comment.(ÕÌ®şÿÿÿÿ
+P
+java:S1161p":Add the "@Override" annotation above this method signature(“–ış
+d	java:S100‚"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™Ø°Û
+W	java:S125ƒ"<This block of commented-out lines of code should be removed.(™¤‰œÿÿÿÿÿ
+s	java:S116"XRename this field "client_socket" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨«Æüÿÿÿÿ
+m	java:S116"RRename this field "user_vc" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ü›ãÕøÿÿÿÿ
+n	java:S116‘"SRename this field "UserName" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õ÷Çİÿÿÿÿÿ
+N
+java:S1135”"2Complete the task associated to this TODO comment.(ƒŠ® úÿÿÿÿ
+W	java:S125"<This block of commented-out lines of code should be removed.(¨İŸÀÿÿÿÿÿ
+a
+java:S2674 "JCheck the return value of the "read" call to see how many bytes were read.(…íì
+i	java:S100­"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹›°¤ûÿÿÿÿ
+d	java:S100µ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“Šê
+N
+java:S1135¾"2Complete the task associated to this TODO comment.(ÕÌ®şÿÿÿÿ
+p
+java:S3012Â"YUse "Arrays.copyOf", "Arrays.asList", "Collections.addAll" or "System.arraycopy" instead.(çğÓ™
+d	java:S100Ç"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–©‚Ñ
+R	java:S125É"<This block of commented-out lines of code should be removed.(ÏœğŒ
+N
+java:S1135Ô"2Complete the task associated to this TODO comment.(ÕÌ®şÿÿÿÿ
+Q
+java:S1161Ü":Add the "@Override" annotation above this method signature(“–ış
+W	java:S125ß"<This block of commented-out lines of code should be removed.(è©Òùÿÿÿÿ

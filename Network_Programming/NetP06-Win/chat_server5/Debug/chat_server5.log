@@ -1,0 +1,3 @@
+﻿  chat_server5.c
+C:\Users\sean0\Documents\GitHub\2022-2\Network_Programming\NetP06-Win\chat_server5\chat_server5.c(273,8): warning C4101: 'buf' :참조되지 않은 지역 변수입니다.
+  chat_server5.vcxproj -> C:\Users\sean0\Documents\GitHub\2022-2\Network_Programming\NetP06-Win\Debug\chat_server5.exe

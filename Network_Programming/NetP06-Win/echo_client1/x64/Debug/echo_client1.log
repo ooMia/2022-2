@@ -1,0 +1,2 @@
+﻿  echo_client1.c
+C:\Users\sean0\Documents\GitHub\2022-2\Network_Programming\NetP06-Win\echo_client1\echo_client1.c(22,10): fatal  error C1083: 포함 파일을 열 수 없습니다. 'sys/socket.h': No such file or directory

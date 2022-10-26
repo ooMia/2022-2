@@ -1,0 +1,9 @@
+
+s	java:S135"YReduce the total number of break and continue statements in this loop to use at most one.(˜ïˆžÿÿÿÿÿ
+P
+java:S1141"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(â“¡‰ùÿÿÿÿ8„àŒºÀ0
+P
+java:S1161":Add the "@Override" annotation above this method signature(“–ýþ
+V	java:S125
+"<This block of commented-out lines of code should be removed.(è©Òùÿÿÿÿ

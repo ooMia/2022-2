@@ -1,0 +1,9 @@
+
+_
+java:S2095"DUse try-with-resources or close this "Socket" in a "finally" clause.(¿‡óˆùÿÿÿÿ
+M
+java:S18544"7Remove this useless assignment to local variable "ret".(”–ÀÆ
+Q	java:S125%"<This block of commented-out lines of code should be removed.(è¸Ùı
+Q	java:S1250"<This block of commented-out lines of code should be removed.(Õ–Ù
+>
+java:S14813"(Remove this unused "ret" local variable.(«Ä

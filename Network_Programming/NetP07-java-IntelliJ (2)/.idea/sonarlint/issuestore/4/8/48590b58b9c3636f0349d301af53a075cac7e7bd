@@ -1,0 +1,15 @@
+
+k	java:S117`"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÁÏ•ıÿÿÿÿ
+f	java:S117a"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ô£´‹
+C
+java:S1604"(Make this anonymous inner class a lambda(¤©Òâüÿÿÿÿ
+Ê
+java:S1598"®This file "JavaChatClientMain.java" should be located in "myWork" directory, not in "C:\Users\sean0\Documents\GitHub\2022-2\Network_Programming\NetP07-java-IntelliJ (2)\src".(â“¡‰ùÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(â“¡‰ùÿÿÿÿ
+Q	java:S125"<This block of commented-out lines of code should be removed.(ÚÆÓÕ
+d
+java:S3252+"IUse static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE".(Õû»öşÿÿÿÿ
+N
+java:S1854b"8Remove this useless assignment to local variable "view".(ÁÁó…
+?
+java:S1481b")Remove this unused "view" local variable.(ÁÁó…
